@@ -1,0 +1,50 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pizza -->
+  <circle cx="60" cy="60" r="40" fill="#ff6b6b"/>
+  <circle cx="60" cy="60" r="35" fill="#ffe66d"/>
+  <circle cx="50" cy="50" r="3" fill="#ff6b6b"/>
+  <circle cx="70" cy="50" r="3" fill="#ff6b6b"/>
+  <circle cx="60" cy="70" r="3" fill="#ff6b6b"/>
+  <circle cx="45" cy="65" r="2" fill="#4ecdc4"/>
+  <circle cx="75" cy="65" r="2" fill="#4ecdc4"/>
+  
+  <!-- Burger -->
+  <rect x="120" y="40" width="60" height="8" rx="4" fill="#8b4513"/>
+  <rect x="125" y="48" width="50" height="12" rx="6" fill="#ffe66d"/>
+  <rect x="130" y="60" width="40" height="8" rx="4" fill="#ff6b6b"/>
+  <rect x="135" y="68" width="30" height="6" rx="3" fill="#4ecdc4"/>
+  <rect x="140" y="74" width="20" height="4" rx="2" fill="#8b4513"/>
+  <rect x="120" y="40" width="60" height="8" rx="4" fill="#8b4513"/>
+  
+  <!-- Sushi -->
+  <rect x="200" y="50" width="40" height="8" rx="4" fill="#374151"/>
+  <rect x="205" y="45" width="30" height="6" rx="3" fill="#ff6b6b"/>
+  <rect x="210" y="40" width="20" height="4" rx="2" fill="#4ecdc4"/>
+  <rect x="200" y="65" width="40" height="8" rx="4" fill="#374151"/>
+  <rect x="205" y="60" width="30" height="6" rx="3" fill="#ff6b6b"/>
+  <rect x="210" y="55" width="20" height="4" rx="2" fill="#4ecdc4"/>
+  <rect x="200" y="80" width="40" height="8" rx="4" fill="#374151"/>
+  <rect x="205" y="75" width="30" height="6" rx="3" fill="#ff6b6b"/>
+  <rect x="210" y="70" width="20" height="4" rx="2" fill="#4ecdc4"/>
+  
+  <!-- Coffee -->
+  <rect x="50" y="120" width="20" height="30" rx="10" fill="#8b4513"/>
+  <rect x="45" y="115" width="30" height="8" rx="4" fill="#8b4513"/>
+  <circle cx="60" cy="110" r="8" fill="#ffe66d"/>
+  <circle cx="60" cy="110" r="5" fill="#ff6b6b"/>
+  
+  <!-- Salad -->
+  <rect x="120" y="120" width="60" height="40" rx="8" fill="#4ecdc4"/>
+  <circle cx="130" cy="130" r="8" fill="#ff6b6b"/>
+  <circle cx="150" cy="125" r="6" fill="#ffe66d"/>
+  <circle cx="170" cy="135" r="7" fill="#ff6b6b"/>
+  <circle cx="140" cy="145" r="5" fill="#4ecdc4"/>
+  <circle cx="160" cy="150" r="6" fill="#ffe66d"/>
+  
+  <!-- Pasta -->
+  <rect x="200" y="120" width="60" height="40" rx="8" fill="#ffe66d"/>
+  <path d="M210 130 Q220 125 230 130 T250 130" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+  <path d="M210 140 Q220 135 230 140 T250 140" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+  <path d="M210 150 Q220 145 230 150 T250 150" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+  <circle cx="240" cy="160" r="8" fill="#4ecdc4"/>
+</svg>

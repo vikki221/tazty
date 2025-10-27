@@ -27,7 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        
         {/* Tawk.to Script */}
         <Script
           id="tawk-to-script"
@@ -38,7 +46,7 @@ export default function RootLayout({
               (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
               s1.async=true;
-              s1.src='https://embed.tawk.to/68ff5c28e7c8851951477a3a/1j8invvp7';
+              s1.src='https://embed.tawk.to/68ff5c28e7c8851951477a3a';
               s1.charset='UTF-8';
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);
@@ -46,15 +54,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
       </body>
     </html>
   );

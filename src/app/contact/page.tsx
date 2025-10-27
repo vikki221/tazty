@@ -1,7 +1,32 @@
 'use client';
 
 import { useState } from 'react';
-import toast, { Toaster } from "react-hot-toast";
+import toast, { CheckmarkIcon, ErrorIcon, LoaderIcon, Toaster } from "react-hot-toast";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+
+    return (
+    <div className="border rounded-lg">
+      <button
+        className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-medium text-gray-900 hover:bg-gray-50 focus:outline-none"
+        onClick={() => setOpen(!open)}
+      >
+        {question}
+        <ChevronDownIcon
+          className={`w-5 h-5 transform transition-transform duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+      {open && (
+        <div className="px-6 pb-4 text-gray-600">{answer}</div>
+      )}
+    </div>
+  );
+}
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -232,32 +257,38 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to common questions
-            </p>
-          </div>
+    {/* FAQ Section */}
+<section className="py-20 bg-white">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p className="text-xl text-gray-600">Quick answers to common questions</p>
+    </div>
 
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">How fast is delivery?</h3>
-              <p className="text-gray-600">Most orders are delivered within 30 minutes. We guarantee delivery within 45 minutes or your order is free.</p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">What are your delivery hours?</h3>
-              <p className="text-gray-600">We deliver from 11:00 AM to 11:00 PM, seven days a week.</p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you offer catering?</h3>
-              <p className="text-gray-600">Yes, we offer catering services for events of all sizes. Contact our team for custom packages.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Accordion */}
+    <div className="space-y-4">
+      {[
+        {
+          q: "How fast is delivery?",
+          a: "Most orders are delivered within 30 minutes. We guarantee delivery within 45 minutes or your order is free.",
+        },
+        {
+          q: "What are your delivery hours?",
+          a: "We deliver from 11:00 AM to 11:00 PM, seven days a week.",
+        },
+        {
+          q: "Do you offer catering?",
+          a: "Yes, we offer catering services for events of all sizes. Contact our team for custom packages.",
+        },
+      ].map((item, index) => (
+        <FAQItem key={index} question={item.q} answer={item.a} />
+      ))}
+    </div>
+  </div>
+</section>
     </div>
   );
 }
+
